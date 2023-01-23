@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Verplichte metatags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JQuery - training</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("#div1").fadeIn();
+$("#div2").fadeIn("slow");
+$("#div3").fadeIn(3000);
+});
+});
+</script>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+font-family: Arial;
+padding: 10px;
+background: #f1f1f1;
+}
+/* Header/Blog Title */
+.header {
+padding: 30px;
+text-align: center;
+background: white;
+}
+.header h1 {
+font-size: 35px;
+color: white;
+text-shadow: 2px 2px 4px #000000;
+text-align: center;
+}
+/* Style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+/* Style the topnav links */
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+background-color: #f1f1f1;
+color: black;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+float: left;
+width: 75%;
+}
+/* Right column */
+.rightcolumn {
+float: left;
+width: 25%;
+background-color: #f1f1f1;
+padding-left: 20px;
+}
+/* Add a card effect for articles */
+.card {
+background-color: white;
+padding: 20px;
+margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+/* Footer */
+.footer {
+padding: 20px;
+text-align: center;
+background: #ddd;
+margin-top: 20px;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns
+stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+.leftcolumn, .rightcolumn {
+width: 100%;
+padding: 0;
+}
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links
+stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+.topnav a {
+float: none;
+width: 100%;
+}
+}
+</style>
+<style>
+.button {
+background-color: Brown;
+border: none;
+color: white;
+padding: 20px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 24px;
+margin: 4px 2px;
+cursor: pointer;
+}
+a:link, a:visited {
+color: white;
+background-color: #333;
+padding: 25px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+a:hover, a:active {
+background-color: #ddd;
+}
+.button2 {background-color: Red;}
+.button3 {background-color: Orange;}
+.button4 {background-color: Yellow;}
+.button5 {background-color: Green;}
+.button6 {background-color: Cyan;}
+.button7 {background-color: Blue;}
+.button8 {background-color: Indigo;}
+.button9 {background-color: Violet;}
+.button10 {background-color: Pink;}
+.button11 {background-color: White;}
+.button12 {background-color: Grey;}
+.button13 {background-color: Black;}
+</style>
+</head>
+<body>
+<div class="header">
+<h1 style="background-color:Azure;">Colors</h1>
+<p>What does color mean?<br><br>
+Color is your brain's interpretation of the signals your eyes give off when light enters. That's
+why you don't see colors when it's dark. In fact, we can only detect red, green, and blue light
+with the rods and cones in our eyes.</p></div><br>
+<button>Red, green, blue are the basic additive colors.</button><br><br>
+<div id="div1"
+style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2"
+style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<h4 style="background-color: Azure;"> Welcome to colors and how nice to see you here,
+thanks in advance!</h4>
+<p>If you don't know which color to choose in a certain situation and if you can't make a choice either, 
+click on one of the stars, the color that appears is the answer for the choice of your color.</p><br>
+<div class="topnav">
+<a href="https://en.wikipedia.org/wiki/Brown"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Red"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Orange"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Yellow"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Green"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Cyan"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Blue"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Indigo"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Violet_(color)"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Pink"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/White"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Grey"
+target="_blank">&#11088;</a>
+<a href="https://en.wikipedia.org/wiki/Black"
+target="_blank">&#11088;</a>
+</div>
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+<h3 style="background-color:Azure;">FLOWER COLORS</h3>
+<h4 style="background-color: #f1f1f1;">With flowers it is possible to convey a message. The
+color of flowers also has a certain meaning.</h4>
+<img src="DD1011.png" alt="Lights" height="400" style="width:100%">
+<p>People have used the symbolism of flowers for centuries. A certain type or color is
+carefully selected to give a bouquet of flowers more power.</p>
+<p> Red flowers are widely used when giving romantic gifts to a loved one. They represent
+love, romance, and passion. Red flowers are often used to convey luxury and to show that
+you care about someone. </p>
+<p> Orange flowers are often used for congratulations and birthdays. They stand for
+cheerfulness, warmth, coziness, pleasure, strength, vitality and energy. Orange flowers are
+most common in the autumn months. </p>
+<p> Yellow flowers represent energy, strength, growth, cheerfulness and joy. Yellow also
+represents warmth, sun and new beginnings. They also go well with the start of spring. For
+example, suitable for: birthday and congratulations. </p>
+<p> Green flowers are often used to congratulate someone on her pregnancy, but also to
+wish someone good luck and strength. The color green represents growth, hope and new
+life. On the other hand, green flowers symbolize fruitfulness, young life and courage. </p>
+<p> Blue flowers symbolize divinity, innocence, space and eternity. For example, blue
+flowers can be given at the birth of a child. It symbolizes trust, loyalty, wisdom,
+self-assurance, intelligence, faith, truth and heaven. </p>
+<p> Purple flowers are often used in mourning and condolence. Purple flowers are also
+given to wish someone good luck and at New Year. Purple flowers represent dignity,
+seriousness and mourning. The blue flowers are often used at the birth of a boy. </p>
+<p> Pink flowers, like white, represent innocence. This color also represents romance and
+tenderness. With this color you really say: "I love you". For example, a pink bouquet is
+suitable for the birth of a girl. </p>
+<p> White flowers are often used at weddings, if you want to wish someone strength or at a
+birth. They represent purity, freshness, clarity and simplicity. They can also have other
+meanings such as: calmness, innocence, virginity, natural love and innocence. </p></div>
+<div class="card">
+<h3 style="background-color:Azure;">CHAKRA COLORS</h3>
+<h4 style="background-color:#f1f1f1;">A chakra can be seen as a wheel of energy within the
+body. Each chakra represents a specific part of the body with an associated color.</h4>
+<img src="E3023.jpg" alt="Lights" height="400" style="width:100%">
+<p>The Seven Chakras colors are Red, Orange, Yellow, Green, Blue, Indigo, Violet. The
+order of the chakra is from the lower root chakra to the upper crown chakra.
+</p>
+<p> I. The color red belongs to the root chakra. Red gives a feeling of warmth, strength, love
+and energy. On the other hand, red also represents anger, destruction and danger. The first
+chakra is the root chakra also called Muladhara in Sanskrit. The root chakra is located in the
+perineum at the bottom of the spine. This chakra represents orientation and provides a safe
+feeling. By staying positive and open to new opportunities, this chakra maintains its
+power.</p>
+<p> II. The color orange belongs to the sacral chakra. Orange gives a feeling of energy,
+willpower, creativity and enthusiasm.
+The second chakra is the sacral chakra also called Swadhisthana in Sanskrit. The sacral
+chakra is located just below the navel and is connected to the genitals, kidneys, bladder and
+uterus. This chakra represents balance on both an emotional and sexual level. It gives you
+strength to enter into relationships with other people in a healthy way.</p>
+<p> III. The color yellow belongs to the solar plexus chakra. Yellow represents cheerfulness,
+wisdom and optimism. In addition to positive effects, yellow also stands for disagreement,
+dominance and aggression. The third chakra is the solar plexus chakra, also called
+Manipura in Sanskrit. This chakra is located at the level of the navel and is linked to the
+stomach, small intestine, liver and spleen. This chakra represents self-confidence and
+purpose. With a well-developed solar plexus chakra, the I-feeling is strongly present. You
+can be there for others, but also for yourself.</p>
+<p> IV. The color green belongs to the heart chakra. Green represents calmness, hope and
+peace. Green also stands for jealousy, envy and superstition. The fourth chakra is the heart
+chakra also called Anahata in Sanskrit. The heart chakra is located in the center of the
+chest, just next to the heart. The Anahata is linked to the heart, lungs and breathing. This
+chakra is the center of the body. The heart chakra is the connecting piece between the top 3
+and the bottom 3 chakras. It stands for intimacy, security and love. Not only for yourself but
+also love for others.</p>
+<p> V. The color blue belongs to the throat chakra. Blue stands for tranquility, independence,
+creativity and sincerity. On the other hand, blue also represents depression and fatigue. The
+fifth chakra is the throat chakra also called Vishuddhi in Sanskrit. The throat chakra is
+(unsurprisingly) located at the throat and is linked to the vocal cords, mouth, cervical
+vertebrae and the thyroid gland. This chakra represents communication and expression of
+emotions. It's about what we say and how we say it. The feeling that arises when making
+sounds. Not only is your own communication important, but also that of the other person.
+Learn to calm down and listen.</p>
+<p> VI. The color indigo belongs to the third eye. Indigo stands for perception, cooling and
+forms the interface between emotional and spiritual events. The sixth chakra is the third eye
+also called Ajna chakra in Sanskrit. The third eye is located in the center of the forehead and
+is connected to the pineal gland, eyes, face and nervous system. This chakra represents
+imagination, wisdom and insight. The third eye catches events that we cannot perceive with
+our eyes. Actually, this chakra sees through feelings.</p>
+<p> VII. The color violet belongs to the crown chakra. Violet represents spirituality,
+self-observation and conviction. On the other hand, violet also represents arrogance.The
+seventh chakra is the crown chakra also called Sahasrara in Sanskrit. The crown chakra is
+located on top of the head, or crown. It is connected to the cerebral cortex and nervous
+system.
+This chakra is often associated with spirituality and connects to the universe. You can see it
+as a gateway to what is happening outside of us.</p>
+</div></div>
+<div class="rightcolumn">
+<div class="card">
+<h3 style="background-color:Azure;">FOOD COLORS</h3>
+<h4 style="background-color:#f1f1f1;">Fruit and vegetables come in all colors of the
+rainbow. Each color exerts a direct influence on the body.</h4>
+<img src="B4444.jpg" alt="Lights" height="200" style="width:100%">
+<p> Red fruits and vegetables are good for your blood and heart. Red foods protect your
+cells.</p>
+<p> Orange fruits and vegetables are good for your blood pressure. Orange foods
+strengthen your eyes. It protects your skin against sunlight and air pollution.</p>
+<p> Yellow fruits and vegetables are good for blood pressure and blood sugar. Yellow food
+contains potassium. Yellow food will detoxify and cleanse your body. </p>
+<p> Green fruits and vegetables are good for your eyesight. Green food is full of calcium for
+strong bones, iron for oxygen transport in your blood and folic acid.</p>
+<p> Blue fruits and vegetables are good for your memory. Blue food is good for the mouth,
+throat and respiratory trac.</p>
+<p> Purple fruits and vegetables stimulate the immune system, and can inhibit chronic
+conditions. </p>
+<p> White fruits and vegetables make you stronger. By eating white food you get a strong
+immune system and you are better protected against diseases.</p>
+</div>
+<div class="card">
+<h3 style="background-color:Azure;">EYE COLORS</h3>
+<h4 style="background-color:#f1f1f1;"> Eyes are a mirror of the soul, the color of eyes has a
+special meaning and can say a lot about someone's personality. </h4>
+<img src="A19.jpg" alt="Lights" height="200" style="width:100%">
+<p> Blue eyed people are smart and kind. They are energetic and often have long
+relationships. They are also observant and extroverted.</p>
+<p> Gray eyed people are rare and are a kind of variant of blue eyes. People with gray eyes
+are people who like to be balanced. They also adapt easily to the people around them.</p>
+<p> Green eyed people are lucky people. They are seen as sexy, seductive and mysterious.
+They are intelligent and always curious, and they like to try something new.</p>
+<p> Black eyed people are the most common eye color. People who have black eyes are
+born leaders.</p>
+<p> Brown eyed people are considered loyal, trustworthy, respectful, and friendly - but by no
+means submissive.</p>
+</div>
+<div class="card">
+<h4 style="background-color: Azure">"The best color in the whole world is the one that looks
+good on you."</h4>
+<p>Eat colorful food for a healthy life, live a colorful life for a healthy soul.</p>
+<p>You can never go wrong with the color that brings out your best features and mood.
+Whether you like a red look or go all out for bright blue, all that matters is that it's the color
+that brings out the best in you. Colors are the smiles of nature. Colors have a direct influence
+on the soul.</p>
+</div>
+</div>
+</div>
+<h4 style="background-color: Azure">"Zodiac signs"</h4>
+<p><p> A zodiac sign is a collection of stars that appear to form a figure when connected by
+lines. The stars of a Zodiac sign appear close together in the sky in a recognizable
+shape.</p>
+<p> Are you curious about your zodiac sign? Learn about the different traits typical of each
+zodiac sign. Clicking on the name of the desired zodiac sign will take you to the next page
+that contains a description, meaning, character traits and more information about your
+zodiac sign. </p>
+<div class="footer">
+<button class="button">&#9800;</button>
+<a href="https://en.wikipedia.org/wiki/Aries_(astrology)" target="_blank"> Aries </a>
+<button class="button button2">&#9801;</button>
+<a href="https://en.wikipedia.org/wiki/Taurus_(astrology)" target="_blank"> Taurus </a>
+<button class="button button3">&#9802;</button>
+<a href="https://en.wikipedia.org/wiki/Gemini_(astrology)" target="_blank"> Gemini </a>
+<button class="button button4">&#9803;</button>
+<a href="https://en.wikipedia.org/wiki/Cancer_(astrology)" target="_blank"> Cancer </a>
+<button class="button button5">&#9804;</button>
+<a href="https://en.wikipedia.org/wiki/Leo_(astrology)" target="_blank"> Leo </a>
+<button class="button button6">&#9805;</button>
+<a href="https://en.wikipedia.org/wiki/Virgo_(astrology)" target="_blank"> Virgo </a>
+<button class="button button7">&#9806;</button>
+<a href="https://en.wikipedia.org/wiki/Libra_(astrology)" target="_blank"> Libra </a>
+<button class="button button8">&#9807;</button>
+<a href="https://en.wikipedia.org/wiki/Scorpio_(astrology)" target="_blank"> Scorpio </a>
+<button class="button button9">&#9808;</button>
+<a href="https://en.wikipedia.org/wiki/Sagittarius_(astrology)" target="_blank"> Sagittarius
+</a>
+<button class="button button10">&#9809;</button>
+<a href="https://en.wikipedia.org/wiki/Capricorn_(astrology)" target="_blank"> Capricorn </a>
+<button class="button button11">&#9810;</button>
+<a href="https://en.wikipedia.org/wiki/Aquarius_(astrology)" target="_blank"> Aquarius
+</a><br>
+<button class="button button12">&#9811;</button>
+<a href="https://en.wikipedia.org/wiki/Pisces_(astrology)" target="_blank"> Pisces </a>
+<button class="button button13">&#9993;</button>
+<a href="mailto:info@in-your-style.com" target="_blank"> Heavensgiftxx@outlook.com </a>
+
+</div>
+</body>
+</html>
